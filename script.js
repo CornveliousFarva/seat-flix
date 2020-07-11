@@ -15,6 +15,18 @@ function setMovieData(movieIndex, moviePrice){
 }
 
 //Update total and count
+function updateSelectedCount() {
+    const selectedSeats = document.querySelectorAll('.row .seat.selected');
+  
+    const seatsIndex = [...selectedSeats].map(seat => [...seats].indexOf(seat));
+  
+    localStorage.setItem('selectedSeats', JSON.stringify(seatsIndex));
+  
+    const selectedSeatsCount = selectedSeats.length;
+  
+    count.innerText = selectedSeatsCount;
+    total.innerText = selectedSeatsCount * ticketPrice;
+  }
 //Get data from localStorage and populate UI
 //Movie select event
 //Seat click event
