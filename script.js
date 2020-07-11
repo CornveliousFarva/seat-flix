@@ -14,3 +14,10 @@ function setMovieData(movieIndex, moviePrice){
     localStorage.setItem('selectedMoviePrice', moviePrice);
 }
 
+//Update total and count
+//Get data from localStorage and populate UI
+//Movie select event
+//Seat click event
+//Initial count and total set
+updateSelectedCount();
+
